@@ -1,0 +1,16 @@
+# Pretrained checkpoints auto-downloaded by ultralytics — don't commit, re-downloads automatically
+yolov8n.pt
+
+# Local training runs (we train on Colab now, not locally — this is leftover/empty)
+runs/
+
+# Roboflow dataset — large, reproducible via download_dataset.py, don't commit
+data/roboflow_v2/
+
+# Env secrets
+.env
+
+# Only commit final selected weights, not every experiment
+models/*
+!models/mahjong_tiles_v1/
+!models/mahjong_tiles_v1/best.pt
