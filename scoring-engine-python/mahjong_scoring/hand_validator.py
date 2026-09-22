@@ -33,14 +33,25 @@ def _decompose_melds(counts: Counter, found: list[Meld], target_melds: int) -> b
 
     tile = min(counts.keys(), key=lambda t: (t.suit.value, t.value))
 
+    # --- Pung ---
     if counts[tile] >= 3:
         counts[tile] -= 3
+        removed = counts[tile] == 0
+        if removed:
+            del counts[tile]  # BUGFIX: must purge zero-count keys, or `min()`
+                               # keeps re-selecting this exhausted tile forever
+
         found.append(Meld(type=MeldType.PUNG, tiles=(tile, tile, tile)))
         if _decompose_melds(counts, found, target_melds):
             return True
         found.pop()
-        counts[tile] += 3
 
+        if removed:
+            counts[tile] = 3
+        else:
+            counts[tile] += 3
+
+    # --- Chow (sequence) — suited tiles only ---
     if tile.suit != Suit.HONOR and tile.value <= 7:
         t2 = Tile(tile.suit, tile.value + 1)
         t3 = Tile(tile.suit, tile.value + 2)
