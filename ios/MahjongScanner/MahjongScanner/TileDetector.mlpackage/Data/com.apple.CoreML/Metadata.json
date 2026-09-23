@@ -1,0 +1,25 @@
+{
+  "MLModelVersionStringKey" : "8.4.155",
+  "MLModelDescriptionKey" : "Ultralytics best model trained on \/content\/mahjong-2\/data.yaml",
+  "MLModelCreatorDefinedKey" : {
+    "batch" : "1",
+    "head" : "Detect",
+    "com.github.apple.coremltools.version" : "9.0",
+    "docs" : "https:\/\/docs.ultralytics.com",
+    "imgsz" : "[640, 640]",
+    "names" : "{0: '1m', 1: '1p', 2: '1s', 3: '1z', 4: '2m', 5: '2p', 6: '2s', 7: '2z', 8: '3m', 9: '3p', 10: '3s', 11: '3z', 12: '4m', 13: '4p', 14: '4s', 15: '4z', 16: '5m', 17: '5p', 18: '5s', 19: '5z', 20: '6m', 21: '6p', 22: '6s', 23: '6z', 24: '7m', 25: '7p', 26: '7s', 27: '7z', 28: '8m', 29: '8p', 30: '8s', 31: '9m', 32: '9p', 33: '9s'}",
+    "com.github.apple.coremltools.conversion_date" : "2026-09-18",
+    "channels" : "3",
+    "IoU threshold" : "0.7",
+    "stride" : "32",
+    "date" : "2026-09-18T23:17:49.442342+00:00",
+    "args" : "{'batch': 1, 'quantize': 16, 'nms': True, 'dynamic': False}",
+    "com.github.apple.coremltools.source_dialect" : "TorchScript",
+    "com.github.apple.coremltools.source" : "torch==2.11.0+cu128",
+    "Confidence threshold" : "0.25",
+    "task" : "detect",
+    "end2end" : "False"
+  },
+  "MLModelAuthorKey" : "Ultralytics",
+  "MLModelLicenseKey" : "AGPL-3.0 License (https:\/\/ultralytics.com\/license)"
+}

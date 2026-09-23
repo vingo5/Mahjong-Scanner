@@ -17,6 +17,7 @@ if not api_key:
 rf = Roboflow(api_key=api_key)
 project = rf.workspace("project-xv49e").project("mahjong-x5dzz")
 
-dataset = project.version(2).download("yolov8", location="../data/roboflow_v2")
+data_dir = Path(__file__).resolve().parent.parent / "data" / "roboflow_v2"
+dataset = project.version(2).download("yolov8", location=str(data_dir))
 
 print(f"Downloaded to: {dataset.location}")

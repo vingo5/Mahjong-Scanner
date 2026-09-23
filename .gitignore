@@ -1,1 +1,7 @@
 .env
+
+# --- Xcode user-specific / local state (redundant safety net) ---
+**/xcuserdata/
+**/*.xcuserstate
+**/*.xcuserdatad/
+*.DS_Store
