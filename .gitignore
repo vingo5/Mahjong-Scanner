@@ -1,7 +1,46 @@
-.env
+cat > .gitignore << 'EOF'
+# --- Xcode / Swift ---
+.DS_Store
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+*.xcworkspace/xcuserdata/
+Pods/
+*.xcworkspacedata
+Carthage/Build/
 
-# --- Xcode user-specific / local state (redundant safety net) ---
-**/xcuserdata/
-**/*.xcuserstate
-**/*.xcuserdatad/
-*.DS_Store
+# --- CoreML large artifacts (track via Git LFS instead, see below) ---
+*.mlmodel
+*.mlpackage
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# --- ML data/weights (raw images & trained weights are large — don't commit directly) ---
+ml/data/raw/*
+!ml/data/raw/.gitkeep
+ml/models/*.pt
+ml/models/*.onnx
+ml/models/*.h5
+
+# --- Misc ---
+.env
+*.log
+EOF

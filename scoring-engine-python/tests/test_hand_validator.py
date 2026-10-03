@@ -1,8 +1,12 @@
+# scoring-engine-python/tests/test_hand_validator.py
+
+import pytest
 from mahjong_scoring.tile import parse_hand
 from mahjong_scoring.hand_validator import validate_winning_hand
 
 
 def test_simple_standard_hand():
+    # 123m 456p 789s 111z EE (four sequences/triplets + pair)
     hand = parse_hand([
         "1m", "2m", "3m",
         "4p", "5p", "6p",
@@ -28,7 +32,7 @@ def test_seven_pairs():
 def test_thirteen_orphans():
     hand = parse_hand([
         "1m", "9m", "1p", "9p", "1s", "9s",
-        "1z", "2z", "3z", "4z", "5z", "6z", "7z", "1z",
+        "1z", "2z", "3z", "4z", "5z", "6z", "7z", "1z",  # duplicate 1z (East)
     ])
     result = validate_winning_hand(hand)
     assert result["is_valid"]
@@ -36,6 +40,7 @@ def test_thirteen_orphans():
 
 
 def test_invalid_hand():
+    # random unconnected tiles, no valid structure
     hand = parse_hand([
         "1m", "3m", "5m", "7p", "9p", "2s",
         "4s", "6s", "1z", "3z", "5z", "7z", "2m", "4m",
@@ -45,6 +50,6 @@ def test_invalid_hand():
 
 
 def test_wrong_tile_count():
-    hand = parse_hand(["1m", "2m", "3m"])
+    hand = parse_hand(["1m", "2m", "3m"])  # too few tiles
     result = validate_winning_hand(hand)
     assert not result["is_valid"]
