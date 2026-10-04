@@ -20,6 +20,7 @@
 		103662673070D28C0095FE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103662523070D28C0095FE2B /* Assets.xcassets */; };
 		103662693070D4260095FE2B /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103662683070D41E0095FE2B /* Tile.swift */; };
 		1036626B3070D4360095FE2B /* HandValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036626A3070D4310095FE2B /* HandValidator.swift */; };
+		1036626D30721AD00095FE2B /* FanCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036626C30721ACB0095FE2B /* FanCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		1036625C3070D28C0095FE2B /* TileDetector.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = TileDetector.mlpackage; sourceTree = "<group>"; };
 		103662683070D41E0095FE2B /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		1036626A3070D4310095FE2B /* HandValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandValidator.swift; sourceTree = "<group>"; };
+		1036626C30721ACB0095FE2B /* FanCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				1036626C30721ACB0095FE2B /* FanCalculator.swift */,
 				103662683070D41E0095FE2B /* Tile.swift */,
 				1036626A3070D4310095FE2B /* HandValidator.swift */,
 				103662523070D28C0095FE2B /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 				103662613070D28C0095FE2B /* ContentView.swift in Sources */,
 				103662623070D28C0095FE2B /* CameraManager.swift in Sources */,
 				103662633070D28C0095FE2B /* Detection.swift in Sources */,
+				1036626D30721AD00095FE2B /* FanCalculator.swift in Sources */,
 				103662643070D28C0095FE2B /* BoundingBoxOverlay.swift in Sources */,
 				103662653070D28C0095FE2B /* CameraPreviewView.swift in Sources */,
 				103662693070D4260095FE2B /* Tile.swift in Sources */,
