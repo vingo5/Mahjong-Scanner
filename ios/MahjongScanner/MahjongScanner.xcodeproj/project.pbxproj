@@ -21,6 +21,7 @@
 		103662693070D4260095FE2B /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103662683070D41E0095FE2B /* Tile.swift */; };
 		1036626B3070D4360095FE2B /* HandValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036626A3070D4310095FE2B /* HandValidator.swift */; };
 		1036626D30721AD00095FE2B /* FanCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036626C30721ACB0095FE2B /* FanCalculator.swift */; };
+		1036626F3074B1590095FE2B /* ScoringResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036626E3074B1500095FE2B /* ScoringResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		103662683070D41E0095FE2B /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		1036626A3070D4310095FE2B /* HandValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandValidator.swift; sourceTree = "<group>"; };
 		1036626C30721ACB0095FE2B /* FanCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanCalculator.swift; sourceTree = "<group>"; };
+		1036626E3074B1500095FE2B /* ScoringResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				1036626E3074B1500095FE2B /* ScoringResultView.swift */,
 				1036626C30721ACB0095FE2B /* FanCalculator.swift */,
 				103662683070D41E0095FE2B /* Tile.swift */,
 				1036626A3070D4310095FE2B /* HandValidator.swift */,
@@ -150,6 +153,7 @@
 				1036625F3070D28C0095FE2B /* TileDetectionManager.swift in Sources */,
 				1036626B3070D4360095FE2B /* HandValidator.swift in Sources */,
 				103662603070D28C0095FE2B /* TileDetector.mlpackage in Sources */,
+				1036626F3074B1590095FE2B /* ScoringResultView.swift in Sources */,
 				103662613070D28C0095FE2B /* ContentView.swift in Sources */,
 				103662623070D28C0095FE2B /* CameraManager.swift in Sources */,
 				103662633070D28C0095FE2B /* Detection.swift in Sources */,

@@ -21,7 +21,15 @@ struct ContentView: View {
                             mode = .scanning
                         },
                         onConfirm: {
-                            print("Confirmed hand: \(capturedTiles.map { $0.label })")
+                            mode = .scoring
+                        }
+                    )
+                case .scoring:
+                    ScoringResultView(
+                        detections: capturedTiles,
+                        onRetake: {
+                            capturedTiles = []
+                            mode = .scanning
                         }
                     )
                 }

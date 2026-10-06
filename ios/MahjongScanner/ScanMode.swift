@@ -5,4 +5,5 @@ import Foundation
 enum ScanMode {
     case scanning
     case reviewing
+    case scoring
 }
